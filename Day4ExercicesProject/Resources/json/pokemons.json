@@ -22,7 +22,7 @@
   },
   {
     "id": 25,
-    "name": 25,
+    "name": "Pikachu",
     "typeIDs": [13],
     "attacks": ["Quick Attack", "Thunder Shock"],
     "isLegendary": false
@@ -31,13 +31,14 @@
     "id": 39,
     "name": "Jigglypuff",
     "typeIDs": [1, 18],
-    "attacks": ["Pound", "Sing"]
+    "attacks": ["Pound", "Sing"],
+    "isLegendary": false
   },
   {
     "id": 52,
     "name": "Meowth",
     "typeIDs": [1],
-    "attacks": "Scratch",
+    "attacks": ["Scratch"],
     "isLegendary": false
   },
   {
@@ -56,7 +57,7 @@
   },
   {
     "id": 133,
-    "pokemonName": "Eevee",
+    "name": "Eevee",
     "typeIDs": [1],
     "attacks": ["Quick Attack", "Bite"],
     "isLegendary": false
@@ -64,7 +65,7 @@
   {
     "id": 150,
     "name": "Mewtwo",
-    "typeIDs": [999],
+    "typeIDs": [14],
     "attacks": ["Confusion", "Psychic"],
     "isLegendary": true
   }

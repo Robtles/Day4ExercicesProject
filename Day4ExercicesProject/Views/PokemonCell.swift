@@ -19,6 +19,8 @@ final class PokemonCell: UITableViewCell {
     private let attacksLabel = UILabel()
     private let legendaryLabel = UILabel()
 
+    private let favoriteImageView = UIImageView()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
@@ -49,6 +51,10 @@ final class PokemonCell: UITableViewCell {
         typeIconImageView.widthAnchor.constraint(equalToConstant: 16).isActive = true
         typeIconImageView.heightAnchor.constraint(equalToConstant: 16).isActive = true
 
+        favoriteImageView.translatesAutoresizingMaskIntoConstraints = false
+        favoriteImageView.tintColor = .systemYellow
+        favoriteImageView.contentMode = .scaleAspectFit
+        
         let typeStackView = UIStackView(arrangedSubviews: [
             typeIconImageView,
             typeLabel
@@ -69,6 +75,7 @@ final class PokemonCell: UITableViewCell {
 
         contentView.addSubview(typeColorView)
         contentView.addSubview(labelsStackView)
+        contentView.addSubview(favoriteImageView)
 
         NSLayoutConstraint.activate([
             typeColorView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -79,29 +86,33 @@ final class PokemonCell: UITableViewCell {
             labelsStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             labelsStackView.leadingAnchor.constraint(equalTo: typeColorView.trailingAnchor, constant: 12),
             labelsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            labelsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12)
+            labelsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
+            
+            favoriteImageView.widthAnchor.constraint(equalToConstant: 20),
+            favoriteImageView.heightAnchor.constraint(equalToConstant: 20),
+            favoriteImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            contentView.trailingAnchor.constraint(equalTo: favoriteImageView.trailingAnchor, constant: 24.0)
         ])
     }
 
-    // TODO: Utiliser un vrai Pokemon pour configurer le modèle
-    func configure(
-        name: String,
-        typeText: String,
-        attacksText: String,
-        legendaryText: String,
-        hexColor: String,
-        iconName: String
-    ) {
-        nameLabel.text = name
-        typeLabel.text = typeText
-        attacksLabel.text = attacksText
-        legendaryLabel.text = legendaryText
-        typeIconImageView.image = UIImage(systemName: iconName)
+    func configure(with pokemon: Pokemon, isFavorite: Bool) {
+        nameLabel.text = "#\(pokemon.id) \(pokemon.name)"
+        typeLabel.text = pokemon.types.map(\.name).joined(separator: ", ")
+        attacksLabel.text = "Attacks: " + pokemon.attacks.joined(separator: ", ")
+        legendaryLabel.text = pokemon.isLegendary ? "Legendary" : "Standard"
+
+        favoriteImageView.image = isFavorite
+            ? UIImage(systemName: "star.fill")
+            : UIImage(systemName: "star")
         
-        if let color = UIColor(hex: hexColor) {
-            typeColorView.backgroundColor = color
+        if let primaryType = pokemon.types.first {
+            typeColorView.backgroundColor = UIColor(hex: primaryType.colorHex) ?? .systemGray5
+            typeIconImageView.image = UIImage(systemName: primaryType.icon) ?? UIImage(systemName: "questionmark.circle")
+            typeIconImageView.tintColor = UIColor(hex: primaryType.colorHex) ?? .secondaryLabel
         } else {
             typeColorView.backgroundColor = .clear
+            typeIconImageView.image = nil
+            typeIconImageView.tintColor = .secondaryLabel
         }
     }
 }

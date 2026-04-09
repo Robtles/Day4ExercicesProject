@@ -32,7 +32,8 @@
   {
     "id": 12,
     "name": "Grass",
-    "colorHex": "#7AC74C"
+    "colorHex": "#7AC74C",
+    "icon": "leaf.fill"
   },
   {
     "id": 13,
@@ -42,7 +43,7 @@
   },
   {
     "id": 14,
-    "label": "Psychic",
+    "name": "Psychic",
     "colorHex": "#F95587",
     "icon": "sparkles"
   },

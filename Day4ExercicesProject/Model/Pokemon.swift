@@ -6,9 +6,17 @@
 import Foundation
 
 struct PokemonDTO: Decodable {
-    // TODO: À compléter à partir du JSON
+    let id: Int
+    let name: String
+    let typeIDs: [Int]
+    let attacks: [String]
+    let isLegendary: Bool
 }
 
 struct Pokemon {
-    // TODO: Modèle final utilisé dans l'application
+    let id: Int
+    let name: String
+    let types: [PokemonType]
+    let attacks: [String]
+    let isLegendary: Bool
 }
