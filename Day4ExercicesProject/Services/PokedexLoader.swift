@@ -15,7 +15,7 @@ final class PokedexLoader {
         let pokemonDTOs: [PokemonDTO] = try loadJSON(named: "pokemons")
         let typeDTOs: [PokemonTypeDTO] = try loadJSON(named: "types")
 
-        // TODO:
+        // TODO: 
         // 1. Transformer les DTO de types en vrais PokemonType
         // 2. Associer les types aux pokémons
         // 3. Retourner un tableau de Pokemon
