@@ -29,8 +29,6 @@ final class PokemonCell: UITableViewCell {
     }
 
     private func setupUI() {
-        accessoryType = .disclosureIndicator
-
         typeColorView.translatesAutoresizingMaskIntoConstraints = false
 
         nameLabel.font = .preferredFont(forTextStyle: .headline)
