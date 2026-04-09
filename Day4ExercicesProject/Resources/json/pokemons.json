@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "typeIDs": [12, 4],
+    "attacks": ["Tackle", "Vine Whip"],
+    "isLegendary": false
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "typeIDs": [10],
+    "attacks": ["Scratch", "Ember"],
+    "isLegendary": false
+  },
+  {
+    "id": 7,
+    "name": "Squirtle",
+    "typeIDs": [11],
+    "attacks": ["Tackle", "Water Gun"],
+    "isLegendary": false
+  },
+  {
+    "id": 25,
+    "name": 25,
+    "typeIDs": [13],
+    "attacks": ["Quick Attack", "Thunder Shock"],
+    "isLegendary": false
+  },
+  {
+    "id": 39,
+    "name": "Jigglypuff",
+    "typeIDs": [1, 18],
+    "attacks": ["Pound", "Sing"]
+  },
+  {
+    "id": 52,
+    "name": "Meowth",
+    "typeIDs": [1],
+    "attacks": "Scratch",
+    "isLegendary": false
+  },
+  {
+    "id": 54,
+    "name": "Psyduck",
+    "typeIDs": [11],
+    "attacks": ["Water Gun", "Confusion"],
+    "isLegendary": false
+  },
+  {
+    "id": 92,
+    "name": "Gastly",
+    "typeIDs": [8, 4],
+    "attacks": ["Lick", "Shadow Ball"],
+    "isLegendary": false
+  },
+  {
+    "id": 133,
+    "pokemonName": "Eevee",
+    "typeIDs": [1],
+    "attacks": ["Quick Attack", "Bite"],
+    "isLegendary": false
+  },
+  {
+    "id": 150,
+    "name": "Mewtwo",
+    "typeIDs": [999],
+    "attacks": ["Confusion", "Psychic"],
+    "isLegendary": true
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "Normal",
+    "colorHex": "#A8A77A",
+    "icon": "circle"
+  },
+  {
+    "id": 4,
+    "name": "Poison",
+    "colorHex": "#A33EA1",
+    "icon": "drop.fill"
+  },
+  {
+    "id": 8,
+    "name": "Ghost",
+    "colorHex": "#735797",
+    "icon": "moon.fill"
+  },
+  {
+    "id": 10,
+    "name": "Fire",
+    "colorHex": "#EE8130",
+    "icon": "flame.fill"
+  },
+  {
+    "id": 11,
+    "name": "Water",
+    "colorHex": "#6390F0",
+    "icon": "drop.fill"
+  },
+  {
+    "id": 12,
+    "name": "Grass",
+    "colorHex": "#7AC74C"
+  },
+  {
+    "id": 13,
+    "name": "Electric",
+    "colorHex": "#F7D02C",
+    "icon": "bolt.fill"
+  },
+  {
+    "id": 14,
+    "label": "Psychic",
+    "colorHex": "#F95587",
+    "icon": "sparkles"
+  },
+  {
+    "id": 18,
+    "name": "Fairy",
+    "colorHex": "#D685AD",
+    "icon": "star.fill"
+  }
+]
